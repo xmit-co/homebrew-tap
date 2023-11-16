@@ -5,20 +5,20 @@
 class Xmit < Formula
   desc "Launch static websites on xmit.co"
   homepage "https://xmit.co/"
-  version "0.1.4"
+  version "0.1.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.1.4/xmit_0.1.4_darwin_arm64.zip"
-      sha256 "746143610632e99ec2159bdb7beeb54b30df3ad3d3bf7bd57fb690cccb4aab3d"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.1.5/xmit_0.1.5_darwin_arm64.zip"
+      sha256 "07c182215f78bb10bbbe5d3a8dafabc12f2156fda835b3a0fdccd0595e041380"
 
       def install
         bin.install "xmit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.1.4/xmit_0.1.4_darwin_amd64.zip"
-      sha256 "ea4c346f5f1a8f20d7881ed2075efe48802ab5df31217ba688ef380bc59ee51c"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.1.5/xmit_0.1.5_darwin_amd64.zip"
+      sha256 "916e0b9ffa049ad27560be54d45ac8bc8de5749af288bbba8b062fc31de09c6b"
 
       def install
         bin.install "xmit"
@@ -28,16 +28,16 @@ class Xmit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.1.4/xmit_0.1.4_linux_arm64.zip"
-      sha256 "dfda69e057b893698e24517262edbe4af89415831423c9b3c418ae8c5f49336e"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.1.5/xmit_0.1.5_linux_arm64.zip"
+      sha256 "98be9c58f58ba20571612450a7ea5b987050024ad2fb55cb2d438f834699a5a0"
 
       def install
         bin.install "xmit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.1.4/xmit_0.1.4_linux_amd64.zip"
-      sha256 "ac703f772c5edea484453694242b6f4772af961231e55425e0b81e19d1834399"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.1.5/xmit_0.1.5_linux_amd64.zip"
+      sha256 "f13d012298872cfcb5efa0c9c66791ff485ee751c59ab586c62c43eecc2a9b7f"
 
       def install
         bin.install "xmit"
