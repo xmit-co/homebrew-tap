@@ -5,20 +5,20 @@
 class Xmit < Formula
   desc "Launch static websites on xmit.co"
   homepage "https://xmit.co/"
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.1.6/xmit_0.1.6_darwin_amd64.zip"
-      sha256 "189ed27a4e2625a726b3e0795240df8ae164ea2c4b5ffccc157b6ab2906328a8"
+    if Hardware::CPU.arm?
+      url "https://github.com/xmit-co/xmit/releases/download/v0.1.7/xmit_0.1.7_darwin_arm64.zip"
+      sha256 "eacd441e00de880c8190b417216fdf3e6ac012c52674c4a87c6aac2242ad51f0"
 
       def install
         bin.install "xmit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.1.6/xmit_0.1.6_darwin_arm64.zip"
-      sha256 "a836fba541259baf340af51e3c7bea6f9721b72ed0fb2b2db92aa0f020e3a11a"
+    if Hardware::CPU.intel?
+      url "https://github.com/xmit-co/xmit/releases/download/v0.1.7/xmit_0.1.7_darwin_amd64.zip"
+      sha256 "950e7fbb7edae85275b541243980c85b4e85326a789808b6e0297e6c09c267c1"
 
       def install
         bin.install "xmit"
@@ -27,17 +27,17 @@ class Xmit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.1.6/xmit_0.1.6_linux_amd64.zip"
-      sha256 "75f652c8c58aece01a81ac9f5f9d065780b91680638983011b24779c1b01b76d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/xmit-co/xmit/releases/download/v0.1.7/xmit_0.1.7_linux_arm64.zip"
+      sha256 "b9c1e5a9d437548e792f235ec7c86197f0777605f984e0d32ff6c97fd04e4b16"
 
       def install
         bin.install "xmit"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.1.6/xmit_0.1.6_linux_arm64.zip"
-      sha256 "0976ae04de848e2d9bac680dee8655c1e528f7aa621ed5b173a6ee87fa46b4c7"
+    if Hardware::CPU.intel?
+      url "https://github.com/xmit-co/xmit/releases/download/v0.1.7/xmit_0.1.7_linux_amd64.zip"
+      sha256 "29351627d94fc9ea75c7d5cc9ca5047e6588b7923a3b333cdeb31dbfdb87da70"
 
       def install
         bin.install "xmit"
