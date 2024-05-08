@@ -5,20 +5,20 @@
 class Xmit < Formula
   desc "Launch static websites on xmit.co"
   homepage "https://xmit.co/"
-  version "0.2.10"
+  version "0.2.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.2.10/xmit_0.2.10_darwin_amd64.zip"
-      sha256 "2090e0fb8387808f1cecf4627bf7d38568880ec12a6d866d3ba3754989138be4"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.2.11/xmit_0.2.11_darwin_amd64.zip"
+      sha256 "8f48b4a4c8f2a7330e3842580d1f87b032f2224cc2a5ec83223fa3393334a4b0"
 
       def install
         bin.install "xmit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.2.10/xmit_0.2.10_darwin_arm64.zip"
-      sha256 "ea0375ec3f074b3e3bf0c100237ddc991b82ae98aa8fa844ccfe2ec41a680ed9"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.2.11/xmit_0.2.11_darwin_arm64.zip"
+      sha256 "5168bd87f1dc0b556d998844e5cef704f8eb6e3e0c0ab37f77287f8b36f8a099"
 
       def install
         bin.install "xmit"
@@ -28,16 +28,16 @@ class Xmit < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.2.10/xmit_0.2.10_linux_amd64.zip"
-      sha256 "a8b35988bb2bad77fe8f45bc69b8e8ec887ed3e745d229edb93b2c6a6fe69c6f"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.2.11/xmit_0.2.11_linux_amd64.zip"
+      sha256 "94b792e9dad476e2ccc364eb6e1f4b753ed6dfd134373512913f19795ac54ced"
 
       def install
         bin.install "xmit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.2.10/xmit_0.2.10_linux_arm64.zip"
-      sha256 "c579fdc7b030936d4f78f160d8d0f07b9864d8642877a645b9ebf29785fda688"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.2.11/xmit_0.2.11_linux_arm64.zip"
+      sha256 "0a72c4cee7c83abf7bc70140a00359165f5f35a71520a9fce099b6f9546675e2"
 
       def install
         bin.install "xmit"
