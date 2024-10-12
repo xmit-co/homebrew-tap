@@ -10,7 +10,7 @@ class Xmit < Formula
   on_macos do
     on_intel do
       url "https://github.com/xmit-co/xmit/releases/download/v0.3.0/xmit_0.3.0_darwin_amd64.zip"
-      sha256 "a6aac49b127fae06e243a995d87085a7a94b4583447a57295fe76530fd935bc0"
+      sha256 "cf8c15e2516c1e18103c748b5c528431d6c3085b8389b7853ca6516deb9b9664"
 
       def install
         bin.install "xmit"
@@ -18,7 +18,7 @@ class Xmit < Formula
     end
     on_arm do
       url "https://github.com/xmit-co/xmit/releases/download/v0.3.0/xmit_0.3.0_darwin_arm64.zip"
-      sha256 "edc59f0488487ec23f1d4ba2fcacd7533f508ea01aedc783c28eb235cd8d5c01"
+      sha256 "1941cd41b016b15cfca7e8d713156220c98ab68a7d3ecb4ca63fbdfb9d77d314"
 
       def install
         bin.install "xmit"
@@ -30,7 +30,7 @@ class Xmit < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/xmit-co/xmit/releases/download/v0.3.0/xmit_0.3.0_linux_amd64.zip"
-        sha256 "e272536232742c36ae1e8e5be0a8728a4b710c21d075c94d8f9ca52ceea0f02d"
+        sha256 "ecd7444337072601da9151752069ea929fe40c89d617323c7aea89b72ea7c29c"
 
         def install
           bin.install "xmit"
@@ -40,7 +40,7 @@ class Xmit < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/xmit-co/xmit/releases/download/v0.3.0/xmit_0.3.0_linux_arm64.zip"
-        sha256 "74161fcfe00b825a124c381414ee34d8c3c53a5c2fb99e8a60298786bb851e54"
+        sha256 "fd3f30e123e933640ff06836858a403f036f6c1891ce9ae79e0cf195fd42a135"
 
         def install
           bin.install "xmit"
