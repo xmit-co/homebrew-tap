@@ -5,20 +5,20 @@
 class Xmit < Formula
   desc "Launch static websites on xmit.co"
   homepage "https://xmit.co/"
-  version "0.2.11"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.2.11/xmit_0.2.11_darwin_amd64.zip"
-      sha256 "8f48b4a4c8f2a7330e3842580d1f87b032f2224cc2a5ec83223fa3393334a4b0"
+    on_intel do
+      url "https://github.com/xmit-co/xmit/releases/download/v0.3.0/xmit_0.3.0_darwin_amd64.zip"
+      sha256 "a6aac49b127fae06e243a995d87085a7a94b4583447a57295fe76530fd935bc0"
 
       def install
         bin.install "xmit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.2.11/xmit_0.2.11_darwin_arm64.zip"
-      sha256 "5168bd87f1dc0b556d998844e5cef704f8eb6e3e0c0ab37f77287f8b36f8a099"
+    on_arm do
+      url "https://github.com/xmit-co/xmit/releases/download/v0.3.0/xmit_0.3.0_darwin_arm64.zip"
+      sha256 "edc59f0488487ec23f1d4ba2fcacd7533f508ea01aedc783c28eb235cd8d5c01"
 
       def install
         bin.install "xmit"
@@ -27,20 +27,24 @@ class Xmit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.2.11/xmit_0.2.11_linux_amd64.zip"
-      sha256 "94b792e9dad476e2ccc364eb6e1f4b753ed6dfd134373512913f19795ac54ced"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/xmit-co/xmit/releases/download/v0.3.0/xmit_0.3.0_linux_amd64.zip"
+        sha256 "e272536232742c36ae1e8e5be0a8728a4b710c21d075c94d8f9ca52ceea0f02d"
 
-      def install
-        bin.install "xmit"
+        def install
+          bin.install "xmit"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xmit-co/xmit/releases/download/v0.2.11/xmit_0.2.11_linux_arm64.zip"
-      sha256 "0a72c4cee7c83abf7bc70140a00359165f5f35a71520a9fce099b6f9546675e2"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/xmit-co/xmit/releases/download/v0.3.0/xmit_0.3.0_linux_arm64.zip"
+        sha256 "74161fcfe00b825a124c381414ee34d8c3c53a5c2fb99e8a60298786bb851e54"
 
-      def install
-        bin.install "xmit"
+        def install
+          bin.install "xmit"
+        end
       end
     end
   end
