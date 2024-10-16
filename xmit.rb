@@ -5,20 +5,20 @@
 class Xmit < Formula
   desc "Launch static websites on xmit.co"
   homepage "https://xmit.co/"
-  version "0.3.3"
+  version "0.3.4"
 
   on_macos do
     on_intel do
-      url "https://github.com/xmit-co/xmit/releases/download/v0.3.3/xmit_0.3.3_darwin_amd64.zip"
-      sha256 "b048cf563b14232602adf9d40a06fc1dff7bbdf94b9cadd6c1c828ea86240b98"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.3.4/xmit_0.3.4_darwin_amd64.zip"
+      sha256 "7a2fe132d3ef42375dac09ee21b1babdfda9f132197c55f7ed5cf879d5a1fb7b"
 
       def install
         bin.install "xmit"
       end
     end
     on_arm do
-      url "https://github.com/xmit-co/xmit/releases/download/v0.3.3/xmit_0.3.3_darwin_arm64.zip"
-      sha256 "7caa859577d46e06a80a654aad731bf608de785ff59d9250590b5702fd200540"
+      url "https://github.com/xmit-co/xmit/releases/download/v0.3.4/xmit_0.3.4_darwin_arm64.zip"
+      sha256 "e162b82b658691d8f718a81e537866e32de5911262fd39ece71145c474f3dd5b"
 
       def install
         bin.install "xmit"
@@ -29,8 +29,8 @@ class Xmit < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/xmit-co/xmit/releases/download/v0.3.3/xmit_0.3.3_linux_amd64.zip"
-        sha256 "1ca2f06c7b8e6ae409bbe6f912a82fc2b4e66babbc29d230e1bd8908b3e53304"
+        url "https://github.com/xmit-co/xmit/releases/download/v0.3.4/xmit_0.3.4_linux_amd64.zip"
+        sha256 "8afdc0ba971499555d53c752f7eba9065c64bf31748059a1000a28d5893f925c"
 
         def install
           bin.install "xmit"
@@ -39,8 +39,8 @@ class Xmit < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/xmit-co/xmit/releases/download/v0.3.3/xmit_0.3.3_linux_arm64.zip"
-        sha256 "7a533f596497d016950bd1f81c5e097d210b503b926ac900108fd488f8f12b25"
+        url "https://github.com/xmit-co/xmit/releases/download/v0.3.4/xmit_0.3.4_linux_arm64.zip"
+        sha256 "0542059ae6cd6bcd4737ef27c3134d126767c63dd772f81cd3d4b6f401e2c1ad"
 
         def install
           bin.install "xmit"
